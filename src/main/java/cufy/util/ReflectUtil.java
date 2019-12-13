@@ -9,7 +9,7 @@
  *   with the word "Editor" on top of it.
  */
 
-package org.cufy.util;
+package cufy.util;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;

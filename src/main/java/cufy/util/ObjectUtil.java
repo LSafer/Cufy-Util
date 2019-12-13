@@ -9,7 +9,7 @@
  *   with the word "Editor" on top of it.
  */
 
-package org.cufy.util;
+package cufy.util;
 
 import java.util.function.Function;
 import java.util.function.Supplier;

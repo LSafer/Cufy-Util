@@ -11,10 +11,8 @@
 /**
  * Useful utilities.
  *
- * Module: org.cufy.util
- *
  * @author LSaferSE
  * @version 2 release (06-Sep-2019)
  * @since 11-Jun-19
  */
-package org.cufy.util;
+package cufy.util;

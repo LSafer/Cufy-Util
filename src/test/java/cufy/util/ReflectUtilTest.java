@@ -9,10 +9,10 @@
  *   with the word "Editor" on top of it.
  */
 
-package org.cufy.util;
+package cufy.util;
 
 @SuppressWarnings("JavaDoc")
-public class StringUtilTest {
+public class ReflectUtilTest {
 	public void test() {
 		//TODO test
 	}
