@@ -9,13 +9,13 @@ repositories {
 	}
 }
 
-sourceSets {
-	//noinspection GroovyAssignabilityCheck
-	main {
-		java.srcDirs = []
-		groovy.srcDirs = [ 'src/main/groovy', 'src/main/java']
-	}
-}
+//sourceSets {
+//noinspection GroovyAssignabilityCheck
+//	main {
+//		java.srcDirs = []
+//		groovy.srcDirs = [ 'src/main/groovy', 'src/main/java']
+//	}
+//}
 
 dependencies {
 	implementation 'org.codehaus.groovy:groovy-all:3.0.0-rc-1'
