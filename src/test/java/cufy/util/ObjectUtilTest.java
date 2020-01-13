@@ -11,9 +11,44 @@
 
 package cufy.util;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 @SuppressWarnings("JavaDoc")
 public class ObjectUtilTest {
-	public void test() {
-		//TODO test
+	@Test
+	public void requireNotNullElse() {
+		Object o = ObjectUtil.requireNonNullElse('O', 'D');
+		Object p = ObjectUtil.requireNonNullElse(null, 'D');
+
+		Assert.assertEquals("Wrong instance", 'O', o);
+		Assert.assertEquals("Wrong instance", 'D', p);
+
+		//noinspection ResultOfMethodCallIgnored
+		ObjectUtil.requireNonNullElse('O', null);
+
+		try {
+			//noinspection ResultOfMethodCallIgnored
+			ObjectUtil.requireNonNullElse(null, null);
+			Assert.fail("No null pointer exception");
+		} catch (NullPointerException ignored) {
+		}
+	}
+
+	@Test
+	public void requireNotNullElseGet() {
+		Object o = ObjectUtil.requireNonNullElseGet('O', () -> 'D');
+		Object p = ObjectUtil.requireNonNullElseGet(null, () -> 'D');
+
+		Assert.assertEquals("Wrong instance", 'O', o);
+		Assert.assertEquals("Wrong instance", 'D', p);
+
+		ObjectUtil.requireNonNullElseGet('O', () -> null);
+
+		try {
+			ObjectUtil.requireNonNullElseGet(null, () -> null);
+			Assert.fail("No null pointer exception");
+		} catch (NullPointerException ignored) {
+		}
 	}
 }

@@ -8,12 +8,11 @@
  *   By adding a new header (at the bottom of this header)
  *   with the word "Editor" on top of it.
  */
-
-package cufy.util;
-
-@SuppressWarnings("JavaDoc")
-public class CollectionUtilTest {
-	public void test() {
-		//TODO test
-	}
-}
+/**
+ * Utils for Functional Interfaces.
+ *
+ * @author LSaferSE
+ * @version 1 release (31-Dec-19)
+ * @since 31-Dec-19
+ */
+package cufy.util.function;
