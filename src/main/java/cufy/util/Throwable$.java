@@ -19,13 +19,13 @@ import java.util.Objects;
  * @version 6 release (13-Jan-2020)
  * @since 13-Jan-2020
  */
-public class ThrowableUtil {
+public class Throwable$ {
 	/**
 	 * This is a util class. And shall not be instanced as an object.
 	 *
 	 * @throws AssertionError when called
 	 */
-	private ThrowableUtil() {
+	private Throwable$() {
 		throw new AssertionError("No instance for you!");
 	}
 

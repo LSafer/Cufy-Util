@@ -15,21 +15,21 @@ import org.junit.Assert;
 import org.junit.Test;
 
 @SuppressWarnings("JavaDoc")
-public class ObjectUtilTest {
+public class Object$Test {
 	@Test
 	public void requireNotNullElse() {
-		Object o = ObjectUtil.requireNonNullElse('O', 'D');
-		Object p = ObjectUtil.requireNonNullElse(null, 'D');
+		Object o = Object$.requireNonNullElse('O', 'D');
+		Object p = Object$.requireNonNullElse(null, 'D');
 
 		Assert.assertEquals("Wrong instance", 'O', o);
 		Assert.assertEquals("Wrong instance", 'D', p);
 
 		//noinspection ResultOfMethodCallIgnored
-		ObjectUtil.requireNonNullElse('O', null);
+		Object$.requireNonNullElse('O', null);
 
 		try {
 			//noinspection ResultOfMethodCallIgnored
-			ObjectUtil.requireNonNullElse(null, null);
+			Object$.requireNonNullElse(null, null);
 			Assert.fail("No null pointer exception");
 		} catch (NullPointerException ignored) {
 		}
@@ -37,16 +37,16 @@ public class ObjectUtilTest {
 
 	@Test
 	public void requireNotNullElseGet() {
-		Object o = ObjectUtil.requireNonNullElseGet('O', () -> 'D');
-		Object p = ObjectUtil.requireNonNullElseGet(null, () -> 'D');
+		Object o = Object$.requireNonNullElseGet('O', () -> 'D');
+		Object p = Object$.requireNonNullElseGet(null, () -> 'D');
 
 		Assert.assertEquals("Wrong instance", 'O', o);
 		Assert.assertEquals("Wrong instance", 'D', p);
 
-		ObjectUtil.requireNonNullElseGet('O', () -> null);
+		Object$.requireNonNullElseGet('O', () -> null);
 
 		try {
-			ObjectUtil.requireNonNullElseGet(null, () -> null);
+			Object$.requireNonNullElseGet(null, () -> null);
 			Assert.fail("No null pointer exception");
 		} catch (NullPointerException ignored) {
 		}

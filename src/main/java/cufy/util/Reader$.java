@@ -12,10 +12,7 @@ package cufy.util;
 
 import java.io.IOException;
 import java.io.Reader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * Useful utils for {@link Reader}s.
@@ -24,13 +21,13 @@ import java.util.Objects;
  * @version 3 release (23-Jan-2020)
  * @since 12-Dec-2019
  */
-final public class ReaderUtil {
+final public class Reader$ {
 	/**
 	 * This is a util class. And shall not be instanced as an object.
 	 *
 	 * @throws AssertionError when called
 	 */
-	private ReaderUtil() {
+	private Reader$() {
 		throw new AssertionError("No instance for you!");
 	}
 
@@ -69,7 +66,7 @@ final public class ReaderUtil {
 	 * @param readLimit the
 	 * @return all the characters from the given reader
 	 * @throws NullPointerException     if the given reader is null
-	 * @throws IllegalArgumentException if ether the given 'bufferCapacity' or 'builderCapacity' is less than 1
+	 * @throws IllegalArgumentException if ether the given 'readLimit' is negative
 	 * @throws IOException              if any I/O exception occurs
 	 */
 	public static String getRemaining(Reader reader, int readLimit) throws IOException {
@@ -93,7 +90,7 @@ final public class ReaderUtil {
 	 * @param fullRead   when true, this method will take the results once a string matches the read characters
 	 * @param ignoreCase when true, this method will match the characters even if they're different case(ex. 'A' and 'a' will match)
 	 * @param strings    the strings match
-	 * @return the index of the string matching the read string. Or -1 if no string matching
+	 * @return the index of the string matched. Or -1 if no string matching
 	 * @throws NullPointerException if the given 'reader' or 'strings' or any of the given strings is null
 	 * @throws IOException          if any I/O exception occurred
 	 * @apiNote can't predict after how many characters will this method stop reading from the given reader.
@@ -126,22 +123,36 @@ final public class ReaderUtil {
 			} while (true);
 		}
 
+		boolean allNulls;
 		do {
 			char c = (char) (ignoreCase ? Character.toLowerCase(i) : i);
 
-			list.replaceAll(s -> {
-				if (s != null) {
-					if (s.isEmpty()) {
-						if (trim && Character.isWhitespace(c))
-							return "";
-					} else if (s.charAt(0) == c) {
-						return s.substring(1);
-					}
-				}
+			allNulls = false;
+			ListIterator<String> iterator = list.listIterator();
+			for (int index = 0; iterator.hasNext(); index++) {
+				String s = iterator.next();
 
-				return null;
-			});
-		} while ((i = reader.read()) != -1 && (fullRead || !list.contains("")));
+				if (s != null) {
+					if (!s.isEmpty()) {
+						if (s.charAt(0) == c) {
+							String sub = s.substring(1);
+
+							if (!fullRead && sub.isEmpty())
+								return index;
+
+							iterator.set(sub);
+							allNulls = false;
+							continue;
+						}
+					} else if (trim && Character.isWhitespace(c)) {
+						allNulls = false;
+						continue;
+					}
+
+					iterator.set(null);
+				}
+			}
+		} while (!allNulls && (i = reader.read()) != -1);
 
 		return list.indexOf("");
 	}

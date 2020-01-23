@@ -20,13 +20,13 @@ import java.util.function.Supplier;
  * @version 2 release (13-Jan-2020)
  * @since 07-Nov-2019
  */
-final public class ObjectUtil {
+final public class Object$ {
 	/**
 	 * This is a util class. And shall not be instanced as an object.
 	 *
 	 * @throws AssertionError when called
 	 */
-	private ObjectUtil() {
+	private Object$() {
 		throw new AssertionError("No instance for you!");
 	}
 

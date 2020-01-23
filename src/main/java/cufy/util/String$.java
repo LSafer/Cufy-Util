@@ -19,13 +19,13 @@ import java.util.Objects;
  * @version 6 release (13-Jan-2020)
  * @since 11 Jun 2019
  */
-final public class StringUtil {
+final public class String$ {
 	/**
 	 * This is a util class. And shall not be instanced as an object.
 	 *
 	 * @throws AssertionError when called
 	 */
-	private StringUtil() {
+	private String$() {
 		throw new AssertionError("No instance for you!");
 	}
 

@@ -24,13 +24,13 @@ import java.util.function.UnaryOperator;
  * @version 7 release (13-Jan-2020)
  * @since 11 Jun 2019
  */
-final public class ArrayUtil {
+final public class Array$ {
 	/**
 	 * This is a util class. And shall not be instanced as an object.
 	 *
 	 * @throws AssertionError when called
 	 */
-	private ArrayUtil() {
+	private Array$() {
 		throw new AssertionError("No instance for you!");
 	}
 
@@ -493,7 +493,7 @@ final public class ArrayUtil {
 
 			@Override
 			public Object[] toArray() {
-				return (Object[]) ArrayUtil.copyOf0(this.a, this.size, Object[].class);
+				return (Object[]) Array$.copyOf0(this.a, this.size, Object[].class);
 			}
 
 			@Override
@@ -502,7 +502,7 @@ final public class ArrayUtil {
 				final int length = a.length;
 
 				if (length < this.size) {
-					return (Object[]) ArrayUtil.copyOf0(this.a, this.size, a.getClass());
+					return (Object[]) Array$.copyOf0(this.a, this.size, a.getClass());
 				} else {
 					if (a.getClass().isAssignableFrom(this.a.getClass()))
 						System.arraycopy(this.a, 0, a, 0, Math.min(length, this.size));
@@ -1001,7 +1001,7 @@ final public class ArrayUtil {
 		Class<?> type = dest.getClass().getComponentType();
 		for (int i = 0; i < length; i++)
 			try {
-				Array.set(dest, destPos++, ReflectUtil.primitiveCast(type, Array.get(src, srcPos++)));
+				Array.set(dest, destPos++, Reflect$.primitiveCast(type, Array.get(src, srcPos++)));
 			} catch (IllegalArgumentException e) {
 				throw (ArrayStoreException) new ArrayStoreException(e.getMessage()).initCause(e);
 			}

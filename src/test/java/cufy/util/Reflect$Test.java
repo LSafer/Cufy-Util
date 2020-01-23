@@ -19,20 +19,20 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 @SuppressWarnings("JavaDoc")
-public class ReflectUtilTest {
+public class Reflect$Test {
 	@Test
 	public void asArrayClass() {
-		Assert.assertEquals("Wrong array class", int[][].class, ReflectUtil.asArrayClass(int[].class));
+		Assert.assertEquals("Wrong array class", int[][].class, Reflect$.asArrayClass(int[].class));
 	}
 
 	@Test
 	public void asObjectClass() {
-		Assert.assertEquals("Wrong object class", Integer[][][][][].class, ReflectUtil.asObjectClass(int[][][][][].class));
+		Assert.assertEquals("Wrong object class", Integer[][][][][].class, Reflect$.asObjectClass(int[][][][][].class));
 	}
 
 	@Test
 	public void asPrimitiveClass() {
-		Assert.assertEquals("Wrong object class", int[][][][][].class, ReflectUtil.asPrimitiveClass(Integer[][][][][].class));
+		Assert.assertEquals("Wrong object class", int[][][][][].class, Reflect$.asPrimitiveClass(Integer[][][][][].class));
 	}
 
 	@Test
@@ -47,7 +47,7 @@ public class ReflectUtilTest {
 		final int fieldsCount = 4;
 		final int totalFieldsCount = standardFieldsCount  + fieldsCount;
 
-		List<Field> fields = ReflectUtil.getAllFields(A.class);
+		List<Field> fields = Reflect$.getAllFields(A.class);
 
 		Assert.assertEquals("Wrong fields size", totalFieldsCount, fields.size());
 		Assert.assertTrue("public field not found", fields.removeIf(f -> f.getName().equals("a")));
@@ -73,7 +73,7 @@ public class ReflectUtilTest {
 		final int methodsCount = 4;
 		final int totalMethodsCount = standardMethodsCount + methodsCount;
 
-		List<Method> methods = ReflectUtil.getAllMethods(A.class);
+		List<Method> methods = Reflect$.getAllMethods(A.class);
 
 		Assert.assertEquals("Wrong methods size", totalMethodsCount, methods.size());
 		Assert.assertTrue("public method not found", methods.removeIf(m -> m.getName().equals("a")));
@@ -96,14 +96,14 @@ public class ReflectUtilTest {
 		Method doOverride = A.class.getMethod("equals", Object.class);
 		Method dontOverride = A.class.getMethod("equals", Object.class, Object.class);
 
-		Assert.assertTrue("Do override in reality", ReflectUtil.overrides(base, doOverride));
-		Assert.assertFalse("Don't override in reality", ReflectUtil.overrides(base, dontOverride));
+		Assert.assertTrue("Do override in reality", Reflect$.overrides(base, doOverride));
+		Assert.assertFalse("Don't override in reality", Reflect$.overrides(base, dontOverride));
 	}
 
 	@Test
 	public void primitiveCast() {
 		Integer i = 413;
-		Long l = (Long) ReflectUtil.primitiveCast(Long.class, i);
+		Long l = (Long) Reflect$.primitiveCast(Long.class, i);
 
 		Assert.assertEquals("Wrong casting value", (int) i, (int) (long) l);
 	}

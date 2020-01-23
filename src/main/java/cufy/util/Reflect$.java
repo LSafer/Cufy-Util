@@ -25,13 +25,13 @@ import java.util.Objects;
  * @version 3 release (13-Jan-2020)
  * @since 19-Nov-2019
  */
-final public class ReflectUtil {
+final public class Reflect$ {
 	/**
 	 * This is a utility class and shouldn't be instanced!.
 	 *
 	 * @throws AssertionError when called
 	 */
-	private ReflectUtil() {
+	private Reflect$() {
 		throw new AssertionError("No instance for you!");
 	}
 
