@@ -12,13 +12,16 @@ package cufy.util;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 /**
  * Useful utils for {@link Reader}s.
  *
  * @author LSaferSE
- * @version 2 release (13-Jan-2020)
+ * @version 3 release (23-Jan-2020)
  * @since 12-Dec-2019
  */
 final public class ReaderUtil {
@@ -32,7 +35,7 @@ final public class ReaderUtil {
 	}
 
 	/**
-	 * Read all the string from the given reader.
+	 * Read the remaining string from the given reader.
 	 *
 	 * @param reader          to read from
 	 * @param bufferCapacity  the capacity of the buffer (higher takes more RAM, lower takes more processing power and time)
@@ -57,5 +60,89 @@ final public class ReaderUtil {
 			builder.append(buffer, 0, l);
 
 		return builder.toString();
+	}
+
+	/**
+	 * Read the remaining string from the given reader. Or less if the remaining string is greater than 'readLimit'.
+	 *
+	 * @param reader    to read from
+	 * @param readLimit the
+	 * @return all the characters from the given reader
+	 * @throws NullPointerException     if the given reader is null
+	 * @throws IllegalArgumentException if ether the given 'bufferCapacity' or 'builderCapacity' is less than 1
+	 * @throws IOException              if any I/O exception occurs
+	 */
+	public static String getRemaining(Reader reader, int readLimit) throws IOException {
+		Objects.requireNonNull(reader, "reader");
+		if (readLimit < 0)
+			throw new IllegalArgumentException("readLimit is negative");
+
+		char[] buffer = new char[readLimit];
+
+		reader.read(buffer);
+
+		return new String(buffer);
+	}
+
+	/**
+	 * This method will check if the remaining characters in the given reader is equals to any of the given strings. This method will depend on the
+	 * given rules on the equation.
+	 *
+	 * @param reader     to read from
+	 * @param trim       when true, this method will ignore the first and last characters if it's whitespaces
+	 * @param fullRead   when true, this method will take the results once a string matches the read characters
+	 * @param ignoreCase when true, this method will match the characters even if they're different case(ex. 'A' and 'a' will match)
+	 * @param strings    the strings match
+	 * @return the index of the string matching the read string. Or -1 if no string matching
+	 * @throws NullPointerException if the given 'reader' or 'strings' or any of the given strings is null
+	 * @throws IOException          if any I/O exception occurred
+	 * @apiNote can't predict after how many characters will this method stop reading from the given reader.
+	 * @implSpec this method will not invoke {@link Reader#mark} or {@link Reader#reset()}
+	 */
+	public static int isRemainingEquals(Reader reader, boolean trim, boolean fullRead, boolean ignoreCase, String... strings) throws IOException {
+		Objects.requireNonNull(reader, "reader");
+		Objects.requireNonNull(strings, "strings");
+
+		List<String> list = new ArrayList<>(Arrays.asList(strings));
+		list.replaceAll(s -> {
+			Objects.requireNonNull(s, "strings[?]");
+			if (trim)
+				s = s.trim();
+			if (ignoreCase)
+				s = s.toLowerCase();
+			return s;
+		});
+
+		int i = reader.read();
+
+		if (trim) {
+			do {
+				if (i == -1)
+					return list.indexOf("");
+				if (!Character.isWhitespace(i))
+					break;
+
+				i = reader.read();
+			} while (true);
+		}
+
+		do {
+			char c = (char) (ignoreCase ? Character.toLowerCase(i) : i);
+
+			list.replaceAll(s -> {
+				if (s != null) {
+					if (s.isEmpty()) {
+						if (trim && Character.isWhitespace(c))
+							return "";
+					} else if (s.charAt(0) == c) {
+						return s.substring(1);
+					}
+				}
+
+				return null;
+			});
+		} while ((i = reader.read()) != -1 && (fullRead || !list.contains("")));
+
+		return list.indexOf("");
 	}
 }

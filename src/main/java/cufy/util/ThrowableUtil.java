@@ -34,9 +34,9 @@ public class ThrowableUtil {
 	 *
 	 * @param throwable to be ignite
 	 * @param <T>       the type of the throwable to trick the compiler that it's the one thrown
+	 * @return nothing
 	 * @throws T                    exactly the given throwable (unless if the given throwable is null. Then NullPointerException will be thrown)
 	 * @throws NullPointerException if the given throwable is null
-	 * @return nothing
 	 */
 	public static <T extends Throwable> T ignite(Throwable throwable) throws T {
 		Objects.requireNonNull(throwable, "throwable");
