@@ -10,7 +10,6 @@
  */
 package cufy.util;
 
-import cufy.util.function.Lambda;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -161,6 +160,6 @@ public class Array$Test {
 
 	@Test
 	public void sum() {
-		Assert.assertEquals("Wrong sum", 12, Array$.sum(new int[]{5, 4, 3}, Lambda::it));
+		Assert.assertEquals("Wrong sum", 12, Array$.sum(new int[]{5, 4, 3}, i -> i));
 	}
 }
