@@ -13,10 +13,10 @@ public class Throwable$Test {
 		try {
 			//noinspection TrivialFunctionalExpressionUsage
 			((Supplier<Object>) () -> {
-				throw Throwable$.ignite(new IOException());
+				throw Throwable$.<Error>ignite(new IOException());
 			}).get();
 		} catch (Exception e) {
-			throw Throwable$.ignite(e);
+			throw Throwable$.<Error>ignite(e);
 		}
 
 		Assert.fail("The exception haven't been caught");
