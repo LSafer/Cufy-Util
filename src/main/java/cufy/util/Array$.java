@@ -505,8 +505,8 @@ final public class Array$ {
 					return (Object[]) Array$.copyOf0(this.a, this.size, a.getClass());
 				} else {
 					if (a.getClass().isAssignableFrom(this.a.getClass()))
-						System.arraycopy(this.a, 0, a, 0, Math.min(length, this.size));
-					else hardcopy0(this.a, 0, a, 0, Math.min(length, this.size));
+						System.arraycopy(this.a, 0, a, 0, this.size);
+					else hardcopy0(this.a, 0, a, 0, this.size);
 
 					if (length > this.size) {
 						a[this.size] = null;
@@ -525,12 +525,13 @@ final public class Array$ {
 	 * @param length the length of the new
 	 * @param klass  the type of the new array
 	 * @param <T>    the type of the elements of the given array
+	 * @param <U>    the type of the elements in the returned array
 	 * @return a copy of the given array with the type of the given class
 	 * @throws NullPointerException     if the given array is null
 	 * @throws IllegalArgumentException if the given array isn't an array. Or the given class isn't an array class. Or the given length is negative
 	 */
-	public static <T> T[] copyOf(T[] array, int length, Class<? super T[]> klass) {
-		return (T[]) copyOf0(array, length, klass);
+	public static <T extends U, U> U[] copyOf(T[] array, int length, Class<U[]> klass) {
+		return (U[]) copyOf0(array, length, klass);
 	}
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
@@ -1544,12 +1545,13 @@ final public class Array$ {
 	 * @param klass  the type of the new array
 	 * @param arrays the arrays to be merged
 	 * @param <T>    the type of the given arrays
+	 * @param <U>    the type of the returned array
 	 * @return an array that includes all the elements of the given arrays ordered with the order of the arrays given.
 	 * @throws IllegalArgumentException if any of the given arrays is not actually an array. Or if the given class isn't an array class
 	 * @throws NullPointerException     if 'arrays' param is null. Or if any of the given arrays are null. Or if the given klass is null
 	 * @throws ArrayStoreException      if any element from the given arrays can't be stored at the product array
 	 */
-	public static <T> T[] merge(Class<? super T[]> klass, T[]... arrays) {
+	public static <T extends U, U> U[] merge(Class<U[]> klass, T[]... arrays) {
 		return (T[]) merge0(klass, arrays);
 	}
 	/**
