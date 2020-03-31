@@ -41,5 +41,15 @@ public class String$Test {
 	public void repeat() {
 		String str = String$.repeat("abc", " ", 3);
 		Assert.assertEquals("Wrong string build", "abc abc abc", str);
+
+		Assert.assertEquals("Wrong string build", "", String$.repeat("a", "x", 0));
+		Assert.assertEquals("Wrong string build", "a", String$.repeat("a", "x", 1));
+		Assert.assertEquals("Wrong string build", "axa", String$.repeat("a", "x", 2));
+		Assert.assertEquals("Wrong string build", "axaxa", String$.repeat("a", "x", 3));
+
+		Assert.assertEquals("Wrong string build", "", String$.repeat("a", 0));
+		Assert.assertEquals("Wrong string build", "a", String$.repeat("a", 1));
+		Assert.assertEquals("Wrong string build", "aa", String$.repeat("a", 2));
+		Assert.assertEquals("Wrong string build", "aaa", String$.repeat("a", 3));
 	}
 }

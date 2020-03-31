@@ -98,7 +98,7 @@ final public class String$ {
 	 * Get given string repeated many times as given.
 	 * <br><br><b>example</b>
 	 * <pre>
-	 * repetitive("abc", " ", 3) == "abc abc abc"
+	 * repeat("abc", " ", 3) == "abc abc abc"
 	 * </pre>
 	 *
 	 * @param string    to repeat from
@@ -123,15 +123,46 @@ final public class String$ {
 		final int lm = length - 1;
 
 		char[] chars = new char[length];
-		for (int p = 0; p < length; ) {
-			string.getChars(0, sl, chars, p);
-			p += sl;
+		for (int i = 0; i < length; ) {
+			string.getChars(0, sl, chars, i);
+			i += sl;
 
-			if (p < lm) {
-				delimiter.getChars(0, dl, chars, p);
-				p += dl;
+			if (i < lm) {
+				delimiter.getChars(0, dl, chars, i);
+				i += dl;
 			}
 		}
+
+		return new String(chars);
+	}
+
+	/**
+	 * Get given string repeated many times as given.
+	 * <br><br><b>example</b>
+	 * <pre>
+	 * repeat("abc_", 3) == "abc_abc_abc_"
+	 * </pre>
+	 *
+	 * @param string to repeat from
+	 * @param times  to repeat
+	 * @return new string created from repeated given string
+	 * @throws NullPointerException     if the given string or delimiter is null
+	 * @throws IllegalArgumentException if the given 'times' is negative
+	 */
+	public static String repeat(String string, int times) {
+		Objects.requireNonNull(string, "string");
+		if (times < 0)
+			throw new IllegalArgumentException("times is negative");
+
+		if (times == 0)
+			return "";
+
+		final int sl = string.length();
+		final int length = sl * times;
+
+		char[] chars = new char[length];
+		for (int i = 0; i < length; i += sl)
+			string.getChars(0, sl, chars, i);
 
 		return new String(chars);
 	}
