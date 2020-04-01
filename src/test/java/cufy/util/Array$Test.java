@@ -23,17 +23,17 @@ public class Array$Test {
 	public void all() {
 		char[] chars = "Sulaiman".toCharArray();
 
-		Assert.assertEquals("X should be missing", (Character) 'X', Array$.all(chars, 'm', 'a', 'S', 'X', 'n'));
-		Assert.assertNull("No char should be missing", Array$.all(chars, 'S', 'u', 'n', 'a'));
+		Assert.assertEquals("X should be missing", 3, Array$.all(chars, 'm', 'a', 'S', 'X', 'n'));
+		Assert.assertEquals("No char should be missing", -1, Array$.all(chars, 'S', 'u', 'n', 'a'));
 	}
 
 	@Test
 	public void any() {
 		Object[] array = {'A', 'B', 'C'};
 
-		Assert.assertEquals("'A' is contained in the array", 'A', Array$.any(array, 'R', 'X', 'a', 'A'));
-		Assert.assertNull("All elements are not in the array", Array$.any(array, 'y', 'b', 'P', '}'));
-		Assert.assertEquals("An array should contains it's elements", 'A', Array$.any(array, array));
+		Assert.assertEquals("'A' is contained in the array", 1, Array$.any(array, 'R', 'X', 'a', 'B'));
+		Assert.assertEquals("All elements are not in the array", -1, Array$.any(array, 'y', 'b', 'P', '}'));
+		Assert.assertEquals("An array should contains it's elements", 0, Array$.any(array, array));
 	}
 
 	@Test
@@ -102,16 +102,16 @@ public class Array$Test {
 	public void max() {
 		char[][] array = {"sulaiman".toCharArray(), "cufy".toCharArray()};
 
-		char[] max = (char[]) Array$.max0(array, (a0, a1) -> {
-			char max0 = (char) Array$.max0(a0, Comparator.naturalOrder());
-			char max1 = (char) Array$.max0(a1, Comparator.naturalOrder());
+		int ai = Array$.max(array, (a0, a1) -> {
+			int max0 = Array$.max0(a0, Comparator.naturalOrder());
+			int max1 = Array$.max0(a1, Comparator.naturalOrder());
 
-			return Character.compare(max0, max1);
+			return Character.compare(a0[max0], a1[max1]);
 		});
 
-		char deRealMax = Array$.max(max, Comparator.naturalOrder());
+		int ci = Array$.max(array[ai], Comparator.naturalOrder());
 
-		Assert.assertEquals("Not the max", 'a', deRealMax);
+		Assert.assertEquals("Not the max", (Character) 'a', (Character) array[ai][ci]);
 	}
 
 	@Test

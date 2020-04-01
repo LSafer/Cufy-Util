@@ -40,119 +40,119 @@ final public class Array$ {
 	 * @param array    the array to be checked
 	 * @param elements to check for
 	 * @param <T>      the type of the elements of the given array
-	 * @return the elements missing on the given array
+	 * @return the index of the elements missing on the given array, Or -1 if no element missing
 	 * @throws NullPointerException     if ether the given 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' aren't an array
 	 */
-	public static <T> T all(T[] array, T... elements) {
-		return (T) all0(array, elements);
+	public static <T> int all(T[] array, T... elements) {
+		return all0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
 	 * @param array    the array to be checked
 	 * @param elements to check for
-	 * @return the elements missing on the given array
+	 * @return the index of the elements missing on the given array, Or -1 if no element missing
 	 * @throws NullPointerException     if ether the given 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' aren't an array
 	 */
-	public static Boolean all(boolean[] array, boolean... elements) {
-		return (Boolean) all0(array, elements);
+	public static int all(boolean[] array, boolean... elements) {
+		return all0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
 	 * @param array    the array to be checked
 	 * @param elements to check for
-	 * @return the elements missing on the given array
+	 * @return the index of the elements missing on the given array, Or -1 if no element missing
 	 * @throws NullPointerException     if ether the given 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' aren't an array
 	 */
-	public static Byte all(byte[] array, byte... elements) {
-		return (Byte) all0(array, elements);
+	public static int all(byte[] array, byte... elements) {
+		return all0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
 	 * @param array    the array to be checked
 	 * @param elements to check for
-	 * @return the elements missing on the given array
+	 * @return the index of the elements missing on the given array, Or -1 if no element missing
 	 * @throws NullPointerException     if ether the given 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' aren't an array
 	 */
-	public static Character all(char[] array, char... elements) {
-		return (Character) all0(array, elements);
+	public static int all(char[] array, char... elements) {
+		return all0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
 	 * @param array    the array to be checked
 	 * @param elements to check for
-	 * @return the elements missing on the given array
+	 * @return the index of the elements missing on the given array, Or -1 if no element missing
 	 * @throws NullPointerException     if ether the given 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' aren't an array
 	 */
-	public static Double all(double[] array, double... elements) {
-		return (Double) all0(array, elements);
+	public static int all(double[] array, double... elements) {
+		return all0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
 	 * @param array    the array to be checked
 	 * @param elements to check for
-	 * @return the elements missing on the given array
+	 * @return the index of the elements missing on the given array, Or -1 if no element missing
 	 * @throws NullPointerException     if ether the given 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' aren't an array
 	 */
-	public static Float all(float[] array, float... elements) {
-		return (Float) all0(array, elements);
+	public static int all(float[] array, float... elements) {
+		return all0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
 	 * @param array    the array to be checked
 	 * @param elements to check for
-	 * @return the elements missing on the given array
+	 * @return the index of the elements missing on the given array, Or -1 if no element missing
 	 * @throws NullPointerException     if ether the given 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' aren't an array
 	 */
-	public static Integer all(int[] array, int... elements) {
-		return (Integer) all0(array, elements);
+	public static int all(int[] array, int... elements) {
+		return all0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
 	 * @param array    the array to be checked
 	 * @param elements to check for
-	 * @return the elements missing on the given array
+	 * @return the index of the elements missing on the given array, Or -1 if no element missing
 	 * @throws NullPointerException     if ether the given 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' aren't an array
 	 */
-	public static Long all(long[] array, long... elements) {
-		return (Long) all0(array, elements);
+	public static int all(long[] array, long... elements) {
+		return all0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
 	 * @param array    the array to be checked
 	 * @param elements to check for
-	 * @return the elements missing on the given array
+	 * @return the index of the elements missing on the given array, Or -1 if no element missing
 	 * @throws NullPointerException     if ether the given 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' aren't an array
 	 */
-	public static Short all(short[] array, short... elements) {
-		return (Short) all0(array, elements);
+	public static int all(short[] array, short... elements) {
+		return all0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
 	 * @param array    the array to be checked
 	 * @param elements to check for
-	 * @return the elements missing on the given array
+	 * @return the index of the elements missing on the given array, Or -1 if no element missing
 	 * @throws NullPointerException     if ether the given 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' aren't an array
 	 */
-	public static Object all0(Object array, Object elements) {
+	public static int all0(Object array, Object elements) {
 		Objects.requireNonNull(array, "array");
 		Objects.requireNonNull(elements, "elements");
 		if (!array.getClass().isArray())
@@ -173,10 +173,10 @@ final public class Array$ {
 					continue for0;
 			}
 
-			return eo;
+			return ei;
 		}
 
-		return null;
+		return -1;
 	}
 
 	/**
@@ -185,119 +185,119 @@ final public class Array$ {
 	 * @param array    to check
 	 * @param elements to check for
 	 * @param <T>      the type of elements to look for
-	 * @return the first element found on the given array
+	 * @return the index of the first element found on the given array, Or -1 if no element found
 	 * @throws NullPointerException     if ether 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if the given 'array' param is actually not an array
 	 */
-	public static <T> T any(T[] array, T... elements) {
-		return (T) any0(array, elements);
+	public static <T> int any(T[] array, T... elements) {
+		return any0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
 	 * @param array    to check
 	 * @param elements to check for
-	 * @return the first element found on the given array
+	 * @return the index of the first element found on the given array, Or -1 if no element found
 	 * @throws NullPointerException     if ether 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if the given 'array' param is actually not an array
 	 */
-	public static Boolean any(boolean[] array, boolean... elements) {
-		return (Boolean) any0(array, elements);
+	public static int any(boolean[] array, boolean... elements) {
+		return any0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
 	 * @param array    to check
 	 * @param elements to check for
-	 * @return the first element found on the given array
+	 * @return the index of the first element found on the given array, Or -1 if no element found
 	 * @throws NullPointerException     if ether 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if the given 'array' param is actually not an array
 	 */
-	public static Byte any(byte[] array, byte... elements) {
-		return (Byte) any0(array, elements);
+	public static int any(byte[] array, byte... elements) {
+		return any0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
 	 * @param array    to check
 	 * @param elements to check for
-	 * @return the first element found on the given array
+	 * @return the index of the first element found on the given array, Or -1 if no element found
 	 * @throws NullPointerException     if ether 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if the given 'array' param is actually not an array
 	 */
-	public static Character any(char[] array, char... elements) {
-		return (Character) any0(array, elements);
+	public static int any(char[] array, char... elements) {
+		return any0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
 	 * @param array    to check
 	 * @param elements to check for
-	 * @return the first element found on the given array
+	 * @return the index of the first element found on the given array, Or -1 if no element found
 	 * @throws NullPointerException     if ether 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if the given 'array' param is actually not an array
 	 */
-	public static Double any(double[] array, double... elements) {
-		return (Double) any0(array, elements);
+	public static int any(double[] array, double... elements) {
+		return any0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
 	 * @param array    to check
 	 * @param elements to check for
-	 * @return the first element found on the given array
+	 * @return the index of the first element found on the given array, Or -1 if no element found
 	 * @throws NullPointerException     if ether 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if the given 'array' param is actually not an array
 	 */
-	public static Float any(float[] array, float... elements) {
-		return (Float) any0(array, elements);
+	public static int any(float[] array, float... elements) {
+		return any0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
 	 * @param array    to check
 	 * @param elements to check for
-	 * @return the first element found on the given array
+	 * @return the index of the first element found on the given array, Or -1 if no element found
 	 * @throws NullPointerException     if ether 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if the given 'array' param is actually not an array
 	 */
-	public static Integer any(int[] array, int... elements) {
-		return (Integer) any0(array, elements);
+	public static int any(int[] array, int... elements) {
+		return any0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
 	 * @param array    to check
 	 * @param elements to check for
-	 * @return the first element found on the given array
+	 * @return the index of the first element found on the given array, Or -1 if no element found
 	 * @throws NullPointerException     if ether 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if the given 'array' param is actually not an array
 	 */
-	public static Long any(long[] array, long... elements) {
-		return (Long) any0(array, elements);
+	public static int any(long[] array, long... elements) {
+		return any0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
 	 * @param array    to check
 	 * @param elements to check for
-	 * @return the first element found on the given array
+	 * @return the index of the first element found on the given array, Or -1 if no element found
 	 * @throws NullPointerException     if ether 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if the given 'array' param is actually not an array
 	 */
-	public static Short any(short[] array, short... elements) {
-		return (Short) any0(array, elements);
+	public static int any(short[] array, short... elements) {
+		return any0(array, elements);
 	}
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
 	 * @param array    to check
 	 * @param elements to check for
-	 * @return the first element found on the given array
+	 * @return the index of the first element found on the given array, Or -1 if no element found
 	 * @throws NullPointerException     if ether 'array' or 'elements' are null
 	 * @throws IllegalArgumentException if ether the given 'array' or 'elements' param is actually not an array
 	 */
-	public static Object any0(Object array, Object elements) {
+	public static int any0(Object array, Object elements) {
 		Objects.requireNonNull(array, "array");
 		Objects.requireNonNull(elements, "elements");
 		if (!array.getClass().isArray())
@@ -314,11 +314,11 @@ final public class Array$ {
 				Object eo = Array.get(elements, ei);
 
 				if (Objects.equals(eo, ao))
-					return ao;
+					return ai;
 			}
 		}
 
-		return null;
+		return -1;
 	}
 
 	/**
@@ -488,7 +488,7 @@ final public class Array$ {
 
 			@Override
 			public boolean contains(Object o) {
-				return any0(this.a, new Object[]{o}) != null;
+				return any0(this.a, new Object[]{o}) != -1;
 			}
 
 			@Override
@@ -1405,119 +1405,119 @@ final public class Array$ {
 	 * @param array      the array to get the greatest element of
 	 * @param comparator to be used to compare elements to get the greatest element
 	 * @param <T>        the type of the elements on the given array
-	 * @return the greatest element on the given array
+	 * @return the index of the greatest element on the given array, Or -1 if the array is empty
 	 * @throws NullPointerException     if ether the given 'comparator' or 'array' is null
 	 * @throws IllegalArgumentException if the given 'array' isn't actually an array
 	 */
-	public static <T> T max(T[] array, Comparator<T> comparator) {
-		return (T) max0(array, comparator);
+	public static <T> int max(T[] array, Comparator<T> comparator) {
+		return max0(array, comparator);
 	}
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
 	 * @param array      the array to get the greatest element of
 	 * @param comparator to be used to compare elements to get the greatest element
-	 * @return the greatest element on the given array
+	 * @return the index of the greatest element on the given array, Or -1 if the array is empty
 	 * @throws NullPointerException     if ether the given 'comparator' or 'array' is null
 	 * @throws IllegalArgumentException if the given 'array' isn't actually an array
 	 */
-	public static Boolean max(boolean[] array, Comparator<Boolean> comparator) {
-		return (Boolean) max0(array, comparator);
+	public static int max(boolean[] array, Comparator<Boolean> comparator) {
+		return max0(array, comparator);
 	}
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
 	 * @param array      the array to get the greatest element of
 	 * @param comparator to be used to compare elements to get the greatest element
-	 * @return the greatest element on the given array
+	 * @return the index of the greatest element on the given array, Or -1 if the array is empty
 	 * @throws NullPointerException     if ether the given 'comparator' or 'array' is null
 	 * @throws IllegalArgumentException if the given 'array' isn't actually an array
 	 */
-	public static Byte max(byte[] array, Comparator<Byte> comparator) {
-		return (Byte) max0(array, comparator);
+	public static int max(byte[] array, Comparator<Byte> comparator) {
+		return max0(array, comparator);
 	}
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
 	 * @param array      the array to get the greatest element of
 	 * @param comparator to be used to compare elements to get the greatest element
-	 * @return the greatest element on the given array
+	 * @return the index of the greatest element on the given array, Or -1 if the array is empty
 	 * @throws NullPointerException     if ether the given 'comparator' or 'array' is null
 	 * @throws IllegalArgumentException if the given 'array' isn't actually an array
 	 */
-	public static Character max(char[] array, Comparator<Character> comparator) {
-		return (Character) max0(array, comparator);
+	public static int max(char[] array, Comparator<Character> comparator) {
+		return max0(array, comparator);
 	}
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
 	 * @param array      the array to get the greatest element of
 	 * @param comparator to be used to compare elements to get the greatest element
-	 * @return the greatest element on the given array
+	 * @return the index of the greatest element on the given array, Or -1 if the array is empty
 	 * @throws NullPointerException     if ether the given 'comparator' or 'array' is null
 	 * @throws IllegalArgumentException if the given 'array' isn't actually an array
 	 */
-	public static Double max(double[] array, Comparator<Double> comparator) {
-		return (Double) max0(array, comparator);
+	public static int max(double[] array, Comparator<Double> comparator) {
+		return max0(array, comparator);
 	}
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
 	 * @param array      the array to get the greatest element of
 	 * @param comparator to be used to compare elements to get the greatest element
-	 * @return the greatest element on the given array
+	 * @return the index of the greatest element on the given array, Or -1 if the array is empty
 	 * @throws NullPointerException     if ether the given 'comparator' or 'array' is null
 	 * @throws IllegalArgumentException if the given 'array' isn't actually an array
 	 */
-	public static Float max(float[] array, Comparator<Float> comparator) {
-		return (Float) max0(array, comparator);
+	public static int max(float[] array, Comparator<Float> comparator) {
+		return max0(array, comparator);
 	}
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
 	 * @param array      the array to get the greatest element of
 	 * @param comparator to be used to compare elements to get the greatest element
-	 * @return the greatest element on the given array
+	 * @return the index of the greatest element on the given array, Or -1 if the array is empty
 	 * @throws NullPointerException     if ether the given 'comparator' or 'array' is null
 	 * @throws IllegalArgumentException if the given 'array' isn't actually an array
 	 */
-	public static Integer max(int[] array, Comparator<Integer> comparator) {
-		return (Integer) max0(array, comparator);
+	public static int max(int[] array, Comparator<Integer> comparator) {
+		return max0(array, comparator);
 	}
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
 	 * @param array      the array to get the greatest element of
 	 * @param comparator to be used to compare elements to get the greatest element
-	 * @return the greatest element on the given array
+	 * @return the index of the greatest element on the given array, Or -1 if the array is empty
 	 * @throws NullPointerException     if ether the given 'comparator' or 'array' is null
 	 * @throws IllegalArgumentException if the given 'array' isn't actually an array
 	 */
-	public static Long max(long[] array, Comparator<Long> comparator) {
-		return (Long) max0(array, comparator);
+	public static int max(long[] array, Comparator<Long> comparator) {
+		return max0(array, comparator);
 	}
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
 	 * @param array      the array to get the greatest element of
 	 * @param comparator to be used to compare elements to get the greatest element
-	 * @return the greatest element on the given array
+	 * @return the index of the greatest element on the given array, Or -1 if the array is empty
 	 * @throws NullPointerException     if ether the given 'comparator' or 'array' is null
 	 * @throws IllegalArgumentException if the given 'array' isn't actually an array
 	 */
-	public static Short max(short[] array, Comparator<Short> comparator) {
-		return (Short) max0(array, comparator);
+	public static int max(short[] array, Comparator<Short> comparator) {
+		return max0(array, comparator);
 	}
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
 	 * @param array      the array to get the greatest element of
 	 * @param comparator to be used to compare elements to get the greatest element
-	 * @return the greatest element on the given array
+	 * @return the index of the greatest element on the given array, Or -1 if the array is empty
 	 * @throws NullPointerException     if ether the given 'comparator' or 'array' is null
 	 * @throws IllegalArgumentException if the given 'array' isn't actually an array
 	 */
-	public static Object max0(Object array, Comparator<?> comparator) {
+	public static int max0(Object array, Comparator<?> comparator) {
 		Objects.requireNonNull(comparator, "comparator");
 		Objects.requireNonNull(array, "array");
 		if (!array.getClass().isArray())
@@ -1526,17 +1526,20 @@ final public class Array$ {
 		int length = Array.getLength(array);
 
 		if (length == 0)
-			return null;
+			return -1;
 
 		Object max = Array.get(array, 0);
+		int index = 0;
 		for (int i = 1; i < length; i++) {
 			Object element = Array.get(array, i);
 
-			if (((Comparator<Object>) comparator).compare(element, max) < 0)
+			if (((Comparator<Object>) comparator).compare(element, max) < 0) {
 				max = element;
+				index = i;
+			}
 		}
 
-		return max;
+		return index;
 	}
 
 	/**
