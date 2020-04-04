@@ -164,35 +164,33 @@ final public class Map$ {
 					HashSet tempSet = new HashSet();
 
 					for (Field field : Reflect$.getAllFields(object.getClass()))
-						//noinspection Since15 it worked with me :)
-						if (field.canAccess(object))
-							tempSet.add(new Entry<String, Object>() {
-								@Override
-								public String getKey() {
-									return field.getName();
-								}
+						tempSet.add(new Entry<String, Object>() {
+							@Override
+							public String getKey() {
+								return field.getName();
+							}
 
-								@Override
-								public Object getValue() {
-									try {
-										field.setAccessible(true);
-										return field.get(object);
-									} catch (IllegalAccessException e) {
-										throw (IllegalAccessError) new IllegalAccessError().initCause(e);
-									}
+							@Override
+							public Object getValue() {
+								try {
+									field.setAccessible(true);
+									return field.get(object);
+								} catch (IllegalAccessException e) {
+									throw (IllegalAccessError) new IllegalAccessError().initCause(e);
 								}
+							}
 
-								@Override
-								public Object setValue(Object value) {
-									try {
-										Object old = this.getValue();
-										field.set(object, value);
-										return old;
-									} catch (IllegalAccessException e) {
-										throw (IllegalAccessError) new IllegalAccessError().initCause(e);
-									}
+							@Override
+							public Object setValue(Object value) {
+								try {
+									Object old = this.getValue();
+									field.set(object, value);
+									return old;
+								} catch (IllegalAccessException e) {
+									throw (IllegalAccessError) new IllegalAccessError().initCause(e);
 								}
-							});
+							}
+						});
 
 					this.entrySet = Collections.unmodifiableSet(tempSet);
 				}
