@@ -1,12 +1,3 @@
-/*
- * Copyright (c) 2019, LSafer, All rights reserved.
- * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
- * -You can edit this file (except the header).
- * -If you have change anything in this file. You
- *   shall mention that this file has been edited.
- *   By adding a new header (at the bottom of this header)
- *   with the word "Editor" on top of it.
- */
 package cufy.util;
 
 import org.junit.Assert;
@@ -16,6 +7,16 @@ import java.util.Arrays;
 
 @SuppressWarnings("JavaDoc")
 public class UnmodifiableGroupTest {
+	@Test
+	public void iterator() {
+		//TODO
+	}
+
+	@Test
+	public void size() {
+		//TODO
+	}
+
 	@Test
 	public void subgroup() {
 		String[] strings = {"my abc", "my def", "my ghi", "abc", "def", "ghi"};
@@ -33,5 +34,10 @@ public class UnmodifiableGroupTest {
 
 		Assert.assertSame("Didn't returned the already resolved object", my, myAgain);
 		Assert.assertSame("Didn't returned the already resolved object", abc, abcAgain);
+	}
+
+	@Test
+	public void toArray() {
+		//TODO
 	}
 }

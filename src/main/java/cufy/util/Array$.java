@@ -1,12 +1,17 @@
 /*
- * Copyright (c) 2019, LSafer, All rights reserved.
- * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *	Copyright 2020 Cufyorg
  *
- * -You can edit this file (except the header).
- * -If you have change anything in this file. You
- *   shall mention that this file has been edited.
- *   By adding a new header (at the bottom of this header)
- *   with the word "Editor" on top of it.
+ *	Licensed under the Apache License, Version 2.0 (the "License");
+ *	you may not use this file except in compliance with the License.
+ *	You may obtain a copy of the License at
+ *
+ *	    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *	Unless required by applicable law or agreed to in writing, software
+ *	distributed under the License is distributed on an "AS IS" BASIS,
+ *	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *	See the License for the specific language governing permissions and
+ *	limitations under the License.
  */
 package cufy.util;
 
@@ -34,6 +39,8 @@ final public class Array$ {
 		throw new AssertionError("No instance for you!");
 	}
 
+	//all
+
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
@@ -47,6 +54,7 @@ final public class Array$ {
 	public static <T> int all(T[] array, T... elements) {
 		return all0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
@@ -59,6 +67,7 @@ final public class Array$ {
 	public static int all(boolean[] array, boolean... elements) {
 		return all0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
@@ -71,6 +80,7 @@ final public class Array$ {
 	public static int all(byte[] array, byte... elements) {
 		return all0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
@@ -83,6 +93,7 @@ final public class Array$ {
 	public static int all(char[] array, char... elements) {
 		return all0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
@@ -95,6 +106,7 @@ final public class Array$ {
 	public static int all(double[] array, double... elements) {
 		return all0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
@@ -107,6 +119,7 @@ final public class Array$ {
 	public static int all(float[] array, float... elements) {
 		return all0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
@@ -119,6 +132,7 @@ final public class Array$ {
 	public static int all(int[] array, int... elements) {
 		return all0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
@@ -131,6 +145,7 @@ final public class Array$ {
 	public static int all(long[] array, long... elements) {
 		return all0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
@@ -143,6 +158,7 @@ final public class Array$ {
 	public static int all(short[] array, short... elements) {
 		return all0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains all of the given elements.
 	 *
@@ -179,6 +195,8 @@ final public class Array$ {
 		return -1;
 	}
 
+	//any
+
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
@@ -192,6 +210,7 @@ final public class Array$ {
 	public static <T> int any(T[] array, T... elements) {
 		return any0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
@@ -204,6 +223,7 @@ final public class Array$ {
 	public static int any(boolean[] array, boolean... elements) {
 		return any0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
@@ -216,6 +236,7 @@ final public class Array$ {
 	public static int any(byte[] array, byte... elements) {
 		return any0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
@@ -228,6 +249,7 @@ final public class Array$ {
 	public static int any(char[] array, char... elements) {
 		return any0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
@@ -240,6 +262,7 @@ final public class Array$ {
 	public static int any(double[] array, double... elements) {
 		return any0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
@@ -252,6 +275,7 @@ final public class Array$ {
 	public static int any(float[] array, float... elements) {
 		return any0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
@@ -264,6 +288,7 @@ final public class Array$ {
 	public static int any(int[] array, int... elements) {
 		return any0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
@@ -276,6 +301,7 @@ final public class Array$ {
 	public static int any(long[] array, long... elements) {
 		return any0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
@@ -288,6 +314,7 @@ final public class Array$ {
 	public static int any(short[] array, short... elements) {
 		return any0(array, elements);
 	}
+
 	/**
 	 * Check whether the given array contains any of the given elements or not.
 	 *
@@ -321,6 +348,8 @@ final public class Array$ {
 		return -1;
 	}
 
+	//asList
+
 	/**
 	 * Construct a new list and add all the given elements from the given 'array' object.
 	 *
@@ -333,6 +362,7 @@ final public class Array$ {
 	public static <T> List<T> asList(T... array) {
 		return asList0(array);
 	}
+
 	/**
 	 * Construct a new list and add all the given elements from the given 'array' object.
 	 *
@@ -344,6 +374,7 @@ final public class Array$ {
 	public static List<Boolean> asList(boolean[] array) {
 		return asList0(array);
 	}
+
 	/**
 	 * Construct a new list and add all the given elements from the given 'array' object.
 	 *
@@ -355,6 +386,7 @@ final public class Array$ {
 	public static List<Byte> asList(byte[] array) {
 		return asList0(array);
 	}
+
 	/**
 	 * Construct a new list and add all the given elements from the given 'array' object.
 	 *
@@ -366,6 +398,7 @@ final public class Array$ {
 	public static List<Character> asList(char[] array) {
 		return asList0(array);
 	}
+
 	/**
 	 * Construct a new list and add all the given elements from the given 'array' object.
 	 *
@@ -377,6 +410,7 @@ final public class Array$ {
 	public static List<Double> asList(double[] array) {
 		return asList0(array);
 	}
+
 	/**
 	 * Construct a new list and add all the given elements from the given 'array' object.
 	 *
@@ -388,6 +422,7 @@ final public class Array$ {
 	public static List<Float> asList(float[] array) {
 		return asList0(array);
 	}
+
 	/**
 	 * Construct a new list and add all the given elements from the given 'array' object.
 	 *
@@ -399,6 +434,7 @@ final public class Array$ {
 	public static List<Integer> asList(int[] array) {
 		return asList0(array);
 	}
+
 	/**
 	 * Construct a new list and add all the given elements from the given 'array' object.
 	 *
@@ -410,6 +446,7 @@ final public class Array$ {
 	public static List<Long> asList(long[] array) {
 		return asList0(array);
 	}
+
 	/**
 	 * Construct a new list and add all the given elements from the given 'array' object.
 	 *
@@ -421,6 +458,7 @@ final public class Array$ {
 	public static List<Short> asList(short[] array) {
 		return asList0(array);
 	}
+
 	/**
 	 * Construct a new list and add all the given elements from the given 'array' object.
 	 *
@@ -518,6 +556,8 @@ final public class Array$ {
 		};
 	}
 
+	//copyOf
+
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
 	 *
@@ -533,6 +573,7 @@ final public class Array$ {
 	public static <T extends U, U> U[] copyOf(T[] array, int length, Class<U[]> klass) {
 		return (U[]) copyOf0(array, length, klass);
 	}
+
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
 	 *
@@ -545,6 +586,7 @@ final public class Array$ {
 	public static boolean[] copyOf(boolean[] array, int length) {
 		return (boolean[]) copyOf0(array, length, boolean[].class);
 	}
+
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
 	 *
@@ -557,6 +599,7 @@ final public class Array$ {
 	public static byte[] copyOf(byte[] array, int length) {
 		return (byte[]) copyOf0(array, length, byte[].class);
 	}
+
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
 	 *
@@ -569,6 +612,7 @@ final public class Array$ {
 	public static char[] copyOf(char[] array, int length) {
 		return (char[]) copyOf0(array, length, char[].class);
 	}
+
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
 	 *
@@ -581,6 +625,7 @@ final public class Array$ {
 	public static double[] copyOf(double[] array, int length) {
 		return (double[]) copyOf0(array, length, double[].class);
 	}
+
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
 	 *
@@ -593,6 +638,7 @@ final public class Array$ {
 	public static float[] copyOf(float[] array, int length) {
 		return (float[]) copyOf0(array, length, float[].class);
 	}
+
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
 	 *
@@ -605,6 +651,7 @@ final public class Array$ {
 	public static int[] copyOf(int[] array, int length) {
 		return (int[]) copyOf0(array, length, int[].class);
 	}
+
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
 	 *
@@ -617,6 +664,7 @@ final public class Array$ {
 	public static long[] copyOf(long[] array, int length) {
 		return (long[]) copyOf0(array, length, long[].class);
 	}
+
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
 	 *
@@ -629,6 +677,7 @@ final public class Array$ {
 	public static short[] copyOf(short[] array, int length) {
 		return (short[]) copyOf0(array, length, short[].class);
 	}
+
 	/**
 	 * Get a copy of the given array. Copy to a new array from the given class.
 	 *
@@ -656,6 +705,8 @@ final public class Array$ {
 
 		return copy;
 	}
+
+	//hardcopy
 
 	/**
 	 * Copies elements on an array from the specified source array, beginning at the specified position, to the specified position of the destination
@@ -689,6 +740,7 @@ final public class Array$ {
 	public static <T extends U, U> void hardcopy(T[] src, int srcPos, U[] dest, int destPos, int length) {
 		hardcopy0(src, srcPos, dest, destPos, length);
 	}
+
 	/**
 	 * Copies elements on an array from the specified source array, beginning at the specified position, to the specified position of the destination
 	 * array. A subsequence of array components are copied from the source array referenced by src to the destination array referenced by dest. The
@@ -719,6 +771,7 @@ final public class Array$ {
 	public static void hardcopy(boolean[] src, int srcPos, boolean[] dest, int destPos, int length) {
 		hardcopy0(src, srcPos, dest, destPos, length);
 	}
+
 	/**
 	 * Copies elements on an array from the specified source array, beginning at the specified position, to the specified position of the destination
 	 * array. A subsequence of array components are copied from the source array referenced by src to the destination array referenced by dest. The
@@ -749,6 +802,7 @@ final public class Array$ {
 	public static void hardcopy(byte[] src, int srcPos, byte[] dest, int destPos, int length) {
 		hardcopy0(src, srcPos, dest, destPos, length);
 	}
+
 	/**
 	 * Copies elements on an array from the specified source array, beginning at the specified position, to the specified position of the destination
 	 * array. A subsequence of array components are copied from the source array referenced by src to the destination array referenced by dest. The
@@ -779,6 +833,7 @@ final public class Array$ {
 	public static void hardcopy(char[] src, int srcPos, char[] dest, int destPos, int length) {
 		hardcopy0(src, srcPos, dest, destPos, length);
 	}
+
 	/**
 	 * Copies elements on an array from the specified source array, beginning at the specified position, to the specified position of the destination
 	 * array. A subsequence of array components are copied from the source array referenced by src to the destination array referenced by dest. The
@@ -809,6 +864,7 @@ final public class Array$ {
 	public static void hardcopy(double[] src, int srcPos, double[] dest, int destPos, int length) {
 		hardcopy0(src, srcPos, dest, destPos, length);
 	}
+
 	/**
 	 * Copies elements on an array from the specified source array, beginning at the specified position, to the specified position of the destination
 	 * array. A subsequence of array components are copied from the source array referenced by src to the destination array referenced by dest. The
@@ -839,6 +895,7 @@ final public class Array$ {
 	public static void hardcopy(float[] src, int srcPos, float[] dest, int destPos, int length) {
 		hardcopy0(src, srcPos, dest, destPos, length);
 	}
+
 	/**
 	 * Copies elements on an array from the specified source array, beginning at the specified position, to the specified position of the destination
 	 * array. A subsequence of array components are copied from the source array referenced by src to the destination array referenced by dest. The
@@ -869,6 +926,7 @@ final public class Array$ {
 	public static void hardcopy(int[] src, int srcPos, int[] dest, int destPos, int length) {
 		hardcopy0(src, srcPos, dest, destPos, length);
 	}
+
 	/**
 	 * Copies elements on an array from the specified source array, beginning at the specified position, to the specified position of the destination
 	 * array. A subsequence of array components are copied from the source array referenced by src to the destination array referenced by dest. The
@@ -899,6 +957,7 @@ final public class Array$ {
 	public static void hardcopy(long[] src, int srcPos, long[] dest, int destPos, int length) {
 		hardcopy0(src, srcPos, dest, destPos, length);
 	}
+
 	/**
 	 * Copies elements on an array from the specified source array, beginning at the specified position, to the specified position of the destination
 	 * array. A subsequence of array components are copied from the source array referenced by src to the destination array referenced by dest. The
@@ -929,6 +988,7 @@ final public class Array$ {
 	public static void hardcopy(short[] src, int srcPos, short[] dest, int destPos, int length) {
 		hardcopy0(src, srcPos, dest, destPos, length);
 	}
+
 	/**
 	 * Copies elements on an array from the specified source array, beginning at the specified position, to the specified position of the destination
 	 * array. A subsequence of array components are copied from the source array referenced by src to the destination array referenced by dest. The
@@ -1008,6 +1068,8 @@ final public class Array$ {
 			}
 	}
 
+	//indexOf
+
 	/**
 	 * Get the index of any of the given elements inside the given array. This will return the first index that equals any fo the given elements.
 	 *
@@ -1020,6 +1082,7 @@ final public class Array$ {
 	public static <T> int indexOf(T[] array, T... elements) {
 		return indexOf0(array, elements);
 	}
+
 	/**
 	 * Get the index of any of the given elements inside the given array. This will return the first index that equals any fo the given elements.
 	 *
@@ -1031,6 +1094,7 @@ final public class Array$ {
 	public static int indexOf(boolean[] array, boolean... elements) {
 		return indexOf0(array, elements);
 	}
+
 	/**
 	 * Get the index of any of the given elements inside the given array. This will return the first index that equals any fo the given elements.
 	 *
@@ -1042,6 +1106,7 @@ final public class Array$ {
 	public static int indexOf(byte[] array, byte... elements) {
 		return indexOf0(array, elements);
 	}
+
 	/**
 	 * Get the index of any of the given elements inside the given array. This will return the first index that equals any fo the given elements.
 	 *
@@ -1053,6 +1118,7 @@ final public class Array$ {
 	public static int indexOf(char[] array, char... elements) {
 		return indexOf0(array, elements);
 	}
+
 	/**
 	 * Get the index of any of the given elements inside the given array. This will return the first index that equals any fo the given elements.
 	 *
@@ -1064,6 +1130,7 @@ final public class Array$ {
 	public static int indexOf(double[] array, double... elements) {
 		return indexOf0(array, elements);
 	}
+
 	/**
 	 * Get the index of any of the given elements inside the given array. This will return the first index that equals any fo the given elements.
 	 *
@@ -1075,6 +1142,7 @@ final public class Array$ {
 	public static int indexOf(float[] array, float... elements) {
 		return indexOf0(array, elements);
 	}
+
 	/**
 	 * Get the index of any of the given elements inside the given array. This will return the first index that equals any fo the given elements.
 	 *
@@ -1086,6 +1154,7 @@ final public class Array$ {
 	public static int indexOf(int[] array, int... elements) {
 		return indexOf0(array, elements);
 	}
+
 	/**
 	 * Get the index of any of the given elements inside the given array. This will return the first index that equals any fo the given elements.
 	 *
@@ -1097,6 +1166,7 @@ final public class Array$ {
 	public static int indexOf(long[] array, long... elements) {
 		return indexOf0(array, elements);
 	}
+
 	/**
 	 * Get the index of any of the given elements inside the given array. This will return the first index that equals any fo the given elements.
 	 *
@@ -1108,6 +1178,7 @@ final public class Array$ {
 	public static int indexOf(short[] array, short... elements) {
 		return indexOf0(array, elements);
 	}
+
 	/**
 	 * Get the index of any of the given elements inside the given array. This will return the first index that equals any fo the given elements.
 	 *
@@ -1142,6 +1213,8 @@ final public class Array$ {
 		return -1;
 	}
 
+	//iterator
+
 	/**
 	 * Get an {@link Iterator} for the given array.
 	 *
@@ -1153,6 +1226,7 @@ final public class Array$ {
 	public static <T> Iterator<T> iterator(T... array) {
 		return (Iterator<T>) iterator0(array);
 	}
+
 	/**
 	 * Get an {@link Iterator} for the given array.
 	 *
@@ -1163,6 +1237,7 @@ final public class Array$ {
 	public static Iterator<Boolean> iterator(boolean[] array) {
 		return (Iterator<Boolean>) iterator0(array);
 	}
+
 	/**
 	 * Get an {@link Iterator} for the given array.
 	 *
@@ -1173,6 +1248,7 @@ final public class Array$ {
 	public static Iterator<Byte> iterator(byte[] array) {
 		return (Iterator<Byte>) iterator0(array);
 	}
+
 	/**
 	 * Get an {@link Iterator} for the given array.
 	 *
@@ -1183,6 +1259,7 @@ final public class Array$ {
 	public static Iterator<Character> iterator(char[] array) {
 		return (Iterator<Character>) iterator0(array);
 	}
+
 	/**
 	 * Get an {@link Iterator} for the given array.
 	 *
@@ -1193,6 +1270,7 @@ final public class Array$ {
 	public static Iterator<Double> iterator(double[] array) {
 		return (Iterator<Double>) iterator0(array);
 	}
+
 	/**
 	 * Get an {@link Iterator} for the given array.
 	 *
@@ -1203,6 +1281,7 @@ final public class Array$ {
 	public static Iterator<Float> iterator(float[] array) {
 		return (Iterator<Float>) iterator0(array);
 	}
+
 	/**
 	 * Get an {@link Iterator} for the given array.
 	 *
@@ -1213,6 +1292,7 @@ final public class Array$ {
 	public static Iterator<Integer> iterator(int[] array) {
 		return (Iterator<Integer>) iterator0(array);
 	}
+
 	/**
 	 * Get an {@link Iterator} for the given array.
 	 *
@@ -1223,6 +1303,7 @@ final public class Array$ {
 	public static Iterator<Long> iterator(long[] array) {
 		return (Iterator<Long>) iterator0(array);
 	}
+
 	/**
 	 * Get an {@link Iterator} for the given array.
 	 *
@@ -1233,6 +1314,7 @@ final public class Array$ {
 	public static Iterator<Short> iterator(short[] array) {
 		return (Iterator<Short>) iterator0(array);
 	}
+
 	/**
 	 * Get an {@link Iterator} for the given array.
 	 *
@@ -1265,6 +1347,8 @@ final public class Array$ {
 		};
 	}
 
+	//last
+
 	/**
 	 * Get an element by the given index discording from the end of the array.
 	 *
@@ -1278,6 +1362,7 @@ final public class Array$ {
 	public static <T> T last(T[] array, int index) {
 		return (T) last0(array, index);
 	}
+
 	/**
 	 * Get an element by the given index discording from the end of the array.
 	 *
@@ -1290,6 +1375,7 @@ final public class Array$ {
 	public static Boolean last(boolean[] array, int index) {
 		return (Boolean) last0(array, index);
 	}
+
 	/**
 	 * Get an element by the given index discording from the end of the array.
 	 *
@@ -1302,6 +1388,7 @@ final public class Array$ {
 	public static Byte last(byte[] array, int index) {
 		return (Byte) last0(array, index);
 	}
+
 	/**
 	 * Get an element by the given index discording from the end of the array.
 	 *
@@ -1314,6 +1401,7 @@ final public class Array$ {
 	public static Character last(char[] array, int index) {
 		return (Character) last0(array, index);
 	}
+
 	/**
 	 * Get an element by the given index discording from the end of the array.
 	 *
@@ -1326,6 +1414,7 @@ final public class Array$ {
 	public static Double last(double[] array, int index) {
 		return (Double) last0(array, index);
 	}
+
 	/**
 	 * Get an element by the given index discording from the end of the array.
 	 *
@@ -1338,6 +1427,7 @@ final public class Array$ {
 	public static Float last(float[] array, int index) {
 		return (Float) last0(array, index);
 	}
+
 	/**
 	 * Get an element by the given index discording from the end of the array.
 	 *
@@ -1350,6 +1440,7 @@ final public class Array$ {
 	public static Integer last(int[] array, int index) {
 		return (Integer) last0(array, index);
 	}
+
 	/**
 	 * Get an element by the given index discording from the end of the array.
 	 *
@@ -1362,6 +1453,7 @@ final public class Array$ {
 	public static Long last(long[] array, int index) {
 		return (Long) last0(array, index);
 	}
+
 	/**
 	 * Get an element by the given index discording from the end of the array.
 	 *
@@ -1374,6 +1466,7 @@ final public class Array$ {
 	public static Short last(short[] array, int index) {
 		return (Short) last0(array, index);
 	}
+
 	/**
 	 * Get an element by the given index discording from the end of the array.
 	 *
@@ -1399,6 +1492,8 @@ final public class Array$ {
 		return Array.get(array, length - 1 - index);
 	}
 
+	//max
+
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
@@ -1412,6 +1507,7 @@ final public class Array$ {
 	public static <T> int max(T[] array, Comparator<T> comparator) {
 		return max0(array, comparator);
 	}
+
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
@@ -1424,6 +1520,7 @@ final public class Array$ {
 	public static int max(boolean[] array, Comparator<Boolean> comparator) {
 		return max0(array, comparator);
 	}
+
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
@@ -1436,6 +1533,7 @@ final public class Array$ {
 	public static int max(byte[] array, Comparator<Byte> comparator) {
 		return max0(array, comparator);
 	}
+
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
@@ -1448,6 +1546,7 @@ final public class Array$ {
 	public static int max(char[] array, Comparator<Character> comparator) {
 		return max0(array, comparator);
 	}
+
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
@@ -1460,6 +1559,7 @@ final public class Array$ {
 	public static int max(double[] array, Comparator<Double> comparator) {
 		return max0(array, comparator);
 	}
+
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
@@ -1472,6 +1572,7 @@ final public class Array$ {
 	public static int max(float[] array, Comparator<Float> comparator) {
 		return max0(array, comparator);
 	}
+
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
@@ -1484,6 +1585,7 @@ final public class Array$ {
 	public static int max(int[] array, Comparator<Integer> comparator) {
 		return max0(array, comparator);
 	}
+
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
@@ -1496,6 +1598,7 @@ final public class Array$ {
 	public static int max(long[] array, Comparator<Long> comparator) {
 		return max0(array, comparator);
 	}
+
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
@@ -1508,6 +1611,7 @@ final public class Array$ {
 	public static int max(short[] array, Comparator<Short> comparator) {
 		return max0(array, comparator);
 	}
+
 	/**
 	 * Get the greater element in the given array. Depending on the given comparator.
 	 *
@@ -1542,6 +1646,8 @@ final public class Array$ {
 		return index;
 	}
 
+	//merge
+
 	/**
 	 * Merge the given arrays in a new array. The new array will contain the content of the given arrays merged in order.
 	 *
@@ -1557,6 +1663,7 @@ final public class Array$ {
 	public static <T extends U, U> U[] merge(Class<U[]> klass, T[]... arrays) {
 		return (T[]) merge0(klass, arrays);
 	}
+
 	/**
 	 * Merge the given arrays in a new array. The new array will contain the content of the given arrays merged in order.
 	 *
@@ -1569,6 +1676,7 @@ final public class Array$ {
 	public static boolean[] merge(boolean[]... arrays) {
 		return (boolean[]) merge0(boolean[].class, arrays);
 	}
+
 	/**
 	 * Merge the given arrays in a new array. The new array will contain the content of the given arrays merged in order.
 	 *
@@ -1581,6 +1689,7 @@ final public class Array$ {
 	public static byte[] merge(byte[]... arrays) {
 		return (byte[]) merge0(byte[].class, arrays);
 	}
+
 	/**
 	 * Merge the given arrays in a new array. The new array will contain the content of the given arrays merged in order.
 	 *
@@ -1593,6 +1702,7 @@ final public class Array$ {
 	public static char[] merge(char[]... arrays) {
 		return (char[]) merge0(char[].class, arrays);
 	}
+
 	/**
 	 * Merge the given arrays in a new array. The new array will contain the content of the given arrays merged in order.
 	 *
@@ -1605,6 +1715,7 @@ final public class Array$ {
 	public static double[] merge(double[]... arrays) {
 		return (double[]) merge0(double[].class, arrays);
 	}
+
 	/**
 	 * Merge the given arrays in a new array. The new array will contain the content of the given arrays merged in order.
 	 *
@@ -1617,6 +1728,7 @@ final public class Array$ {
 	public static float[] merge(float[]... arrays) {
 		return (float[]) merge0(float[].class, arrays);
 	}
+
 	/**
 	 * Merge the given arrays in a new array. The new array will contain the content of the given arrays merged in order.
 	 *
@@ -1629,6 +1741,7 @@ final public class Array$ {
 	public static int[] merge(int[]... arrays) {
 		return (int[]) merge0(int[].class, arrays);
 	}
+
 	/**
 	 * Merge the given arrays in a new array. The new array will contain the content of the given arrays merged in order.
 	 *
@@ -1641,6 +1754,7 @@ final public class Array$ {
 	public static long[] merge(long[]... arrays) {
 		return (long[]) merge0(long[].class, arrays);
 	}
+
 	/**
 	 * Merge the given arrays in a new array. The new array will contain the content of the given arrays merged in order.
 	 *
@@ -1653,6 +1767,7 @@ final public class Array$ {
 	public static short[] merge(short[]... arrays) {
 		return (short[]) merge0(short[].class, arrays);
 	}
+
 	/**
 	 * Merge the given arrays in a new array. The new array will contain the content of the given arrays merged in order.
 	 *
@@ -1696,6 +1811,8 @@ final public class Array$ {
 		return product;
 	}
 
+	//replace
+
 	/**
 	 * Replace every element on the given array using the given operator.
 	 *
@@ -1708,6 +1825,7 @@ final public class Array$ {
 	public static <T> void replace(T[] array, UnaryOperator<T> operator) {
 		replace0(array, operator);
 	}
+
 	/**
 	 * Replace every element on the given array using the given operator.
 	 *
@@ -1719,6 +1837,7 @@ final public class Array$ {
 	public static void replace(boolean[] array, UnaryOperator<Boolean> operator) {
 		replace0(array, operator);
 	}
+
 	/**
 	 * Replace every element on the given array using the given operator.
 	 *
@@ -1730,6 +1849,7 @@ final public class Array$ {
 	public static void replace(byte[] array, UnaryOperator<Byte> operator) {
 		replace0(array, operator);
 	}
+
 	/**
 	 * Replace every element on the given array using the given operator.
 	 *
@@ -1741,6 +1861,7 @@ final public class Array$ {
 	public static void replace(char[] array, UnaryOperator<Character> operator) {
 		replace0(array, operator);
 	}
+
 	/**
 	 * Replace every element on the given array using the given operator.
 	 *
@@ -1752,6 +1873,7 @@ final public class Array$ {
 	public static void replace(double[] array, UnaryOperator<Double> operator) {
 		replace0(array, operator);
 	}
+
 	/**
 	 * Replace every element on the given array using the given operator.
 	 *
@@ -1763,6 +1885,7 @@ final public class Array$ {
 	public static void replace(float[] array, UnaryOperator<Float> operator) {
 		replace0(array, operator);
 	}
+
 	/**
 	 * Replace every element on the given array using the given operator.
 	 *
@@ -1774,6 +1897,7 @@ final public class Array$ {
 	public static void replace(int[] array, UnaryOperator<Integer> operator) {
 		replace0(array, operator);
 	}
+
 	/**
 	 * Replace every element on the given array using the given operator.
 	 *
@@ -1785,6 +1909,7 @@ final public class Array$ {
 	public static void replace(long[] array, UnaryOperator<Long> operator) {
 		replace0(array, operator);
 	}
+
 	/**
 	 * Replace every element on the given array using the given operator.
 	 *
@@ -1796,6 +1921,7 @@ final public class Array$ {
 	public static void replace(short[] array, UnaryOperator<Short> operator) {
 		replace0(array, operator);
 	}
+
 	/**
 	 * Replace every element on the given array using the given operator.
 	 *
@@ -1815,6 +1941,8 @@ final public class Array$ {
 			Array.set(array, i, ((UnaryOperator<Object>) operator).apply(Array.get(array, i)));
 	}
 
+	//replaceIf
+
 	/**
 	 * Replace every element on the given array if that element matches the given predicate conditions. Using the given operator.
 	 *
@@ -1829,6 +1957,7 @@ final public class Array$ {
 	public static <T> int replaceIf(T[] array, Predicate<T> predicate, UnaryOperator<T> operator) {
 		return replaceIf0(array, predicate, operator);
 	}
+
 	/**
 	 * Replace every element on the given array if that element matches the given predicate conditions. Using the given operator.
 	 *
@@ -1842,6 +1971,7 @@ final public class Array$ {
 	public static int replaceIf(boolean[] array, Predicate<Boolean> predicate, UnaryOperator<Boolean> operator) {
 		return replaceIf0(array, predicate, operator);
 	}
+
 	/**
 	 * Replace every element on the given array if that element matches the given predicate conditions. Using the given operator.
 	 *
@@ -1855,6 +1985,7 @@ final public class Array$ {
 	public static int replaceIf(byte[] array, Predicate<Byte> predicate, UnaryOperator<Byte> operator) {
 		return replaceIf0(array, predicate, operator);
 	}
+
 	/**
 	 * Replace every element on the given array if that element matches the given predicate conditions. Using the given operator.
 	 *
@@ -1868,6 +1999,7 @@ final public class Array$ {
 	public static int replaceIf(char[] array, Predicate<Character> predicate, UnaryOperator<Character> operator) {
 		return replaceIf0(array, predicate, operator);
 	}
+
 	/**
 	 * Replace every element on the given array if that element matches the given predicate conditions. Using the given operator.
 	 *
@@ -1881,6 +2013,7 @@ final public class Array$ {
 	public static int replaceIf(double[] array, Predicate<Double> predicate, UnaryOperator<Double> operator) {
 		return replaceIf0(array, predicate, operator);
 	}
+
 	/**
 	 * Replace every element on the given array if that element matches the given predicate conditions. Using the given operator.
 	 *
@@ -1894,6 +2027,7 @@ final public class Array$ {
 	public static int replaceIf(float[] array, Predicate<Float> predicate, UnaryOperator<Float> operator) {
 		return replaceIf0(array, predicate, operator);
 	}
+
 	/**
 	 * Replace every element on the given array if that element matches the given predicate conditions. Using the given operator.
 	 *
@@ -1907,6 +2041,7 @@ final public class Array$ {
 	public static int replaceIf(int[] array, Predicate<Integer> predicate, UnaryOperator<Integer> operator) {
 		return replaceIf0(array, predicate, operator);
 	}
+
 	/**
 	 * Replace every element on the given array if that element matches the given predicate conditions. Using the given operator.
 	 *
@@ -1920,6 +2055,7 @@ final public class Array$ {
 	public static int replaceIf(long[] array, Predicate<Long> predicate, UnaryOperator<Long> operator) {
 		return replaceIf0(array, predicate, operator);
 	}
+
 	/**
 	 * Replace every element on the given array if that element matches the given predicate conditions. Using the given operator.
 	 *
@@ -1933,6 +2069,7 @@ final public class Array$ {
 	public static int replaceIf(short[] array, Predicate<Short> predicate, UnaryOperator<Short> operator) {
 		return replaceIf0(array, predicate, operator);
 	}
+
 	/**
 	 * Replace every element on the given array if that element matches the given predicate conditions. Using the given operator.
 	 *
@@ -1964,6 +2101,8 @@ final public class Array$ {
 		return r;
 	}
 
+	//subarray
+
 	/**
 	 * Remove the last and the first elements of the given {@link Object array}. Depending on the given values.
 	 *
@@ -1980,6 +2119,7 @@ final public class Array$ {
 	public static <T> T[] subarray(T[] array, int beginIndex, int endIndex) {
 		return (T[]) subarray0(array, beginIndex, endIndex);
 	}
+
 	/**
 	 * Remove the last and the first elements of the given {@link Object array}. Depending on the given values.
 	 *
@@ -1995,6 +2135,7 @@ final public class Array$ {
 	public static boolean[] subarray(boolean[] array, int beginIndex, int endIndex) {
 		return (boolean[]) subarray0(array, beginIndex, endIndex);
 	}
+
 	/**
 	 * Remove the last and the first elements of the given {@link Object array}. Depending on the given values.
 	 *
@@ -2010,6 +2151,7 @@ final public class Array$ {
 	public static byte[] subarray(byte[] array, int beginIndex, int endIndex) {
 		return (byte[]) subarray0(array, beginIndex, endIndex);
 	}
+
 	/**
 	 * Remove the last and the first elements of the given {@link Object array}. Depending on the given values.
 	 *
@@ -2025,6 +2167,7 @@ final public class Array$ {
 	public static char[] subarray(char[] array, int beginIndex, int endIndex) {
 		return (char[]) subarray0(array, beginIndex, endIndex);
 	}
+
 	/**
 	 * Remove the last and the first elements of the given {@link Object array}. Depending on the given values.
 	 *
@@ -2040,6 +2183,7 @@ final public class Array$ {
 	public static double[] subarray(double[] array, int beginIndex, int endIndex) {
 		return (double[]) subarray0(array, beginIndex, endIndex);
 	}
+
 	/**
 	 * Remove the last and the first elements of the given {@link Object array}. Depending on the given values.
 	 *
@@ -2055,6 +2199,7 @@ final public class Array$ {
 	public static float[] subarray(float[] array, int beginIndex, int endIndex) {
 		return (float[]) subarray0(array, beginIndex, endIndex);
 	}
+
 	/**
 	 * Remove the last and the first elements of the given {@link Object array}. Depending on the given values.
 	 *
@@ -2070,6 +2215,7 @@ final public class Array$ {
 	public static int[] subarray(int[] array, int beginIndex, int endIndex) {
 		return (int[]) subarray0(array, beginIndex, endIndex);
 	}
+
 	/**
 	 * Remove the last and the first elements of the given {@link Object array}. Depending on the given values.
 	 *
@@ -2085,6 +2231,7 @@ final public class Array$ {
 	public static long[] subarray(long[] array, int beginIndex, int endIndex) {
 		return (long[]) subarray0(array, beginIndex, endIndex);
 	}
+
 	/**
 	 * Remove the last and the first elements of the given {@link Object array}. Depending on the given values.
 	 *
@@ -2100,6 +2247,7 @@ final public class Array$ {
 	public static short[] subarray(short[] array, int beginIndex, int endIndex) {
 		return (short[]) subarray0(array, beginIndex, endIndex);
 	}
+
 	/**
 	 * Remove the last and the first elements of the given {@link Object array}. Depending on the given values.
 	 *
@@ -2139,6 +2287,8 @@ final public class Array$ {
 		return product;
 	}
 
+	//sum
+
 	/**
 	 * Get the total sum of the given array. By applying the given function foreach element of the given array. Then sum all the returned values
 	 * together.
@@ -2153,6 +2303,7 @@ final public class Array$ {
 	public static <T> long sum(T[] array, Function<T, Number> function) {
 		return sum0(array, function);
 	}
+
 	/**
 	 * Get the total sum of the given array. By applying the given function foreach element of the given array. Then sum all the returned values
 	 * together.
@@ -2166,6 +2317,7 @@ final public class Array$ {
 	public static long sum(boolean[] array, Function<Boolean, Number> function) {
 		return sum0(array, function);
 	}
+
 	/**
 	 * Get the total sum of the given array. By applying the given function foreach element of the given array. Then sum all the returned values
 	 * together.
@@ -2179,6 +2331,7 @@ final public class Array$ {
 	public static long sum(byte[] array, Function<Byte, Number> function) {
 		return sum0(array, function);
 	}
+
 	/**
 	 * Get the total sum of the given array. By applying the given function foreach element of the given array. Then sum all the returned values
 	 * together.
@@ -2192,6 +2345,7 @@ final public class Array$ {
 	public static long sum(char[] array, Function<Character, Number> function) {
 		return sum0(array, function);
 	}
+
 	/**
 	 * Get the total sum of the given array. By applying the given function foreach element of the given array. Then sum all the returned values
 	 * together.
@@ -2205,6 +2359,7 @@ final public class Array$ {
 	public static long sum(double[] array, Function<Double, Number> function) {
 		return sum0(array, function);
 	}
+
 	/**
 	 * Get the total sum of the given array. By applying the given function foreach element of the given array. Then sum all the returned values
 	 * together.
@@ -2218,6 +2373,7 @@ final public class Array$ {
 	public static long sum(float[] array, Function<Float, Number> function) {
 		return sum0(array, function);
 	}
+
 	/**
 	 * Get the total sum of the given array. By applying the given function foreach element of the given array. Then sum all the returned values
 	 * together.
@@ -2231,6 +2387,7 @@ final public class Array$ {
 	public static long sum(int[] array, Function<Integer, Number> function) {
 		return sum0(array, function);
 	}
+
 	/**
 	 * Get the total sum of the given array. By applying the given function foreach element of the given array. Then sum all the returned values
 	 * together.
@@ -2244,6 +2401,7 @@ final public class Array$ {
 	public static long sum(long[] array, Function<Long, Number> function) {
 		return sum0(array, function);
 	}
+
 	/**
 	 * Get the total sum of the given array. By applying the given function foreach element of the given array. Then sum all the returned values
 	 * together.
@@ -2257,6 +2415,7 @@ final public class Array$ {
 	public static long sum(short[] array, Function<Short, Number> function) {
 		return sum0(array, function);
 	}
+
 	/**
 	 * Get the total sum of the given array. By applying the given function foreach element of the given array. Then sum all the returned values
 	 * together.

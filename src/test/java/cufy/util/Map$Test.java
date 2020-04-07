@@ -11,7 +11,7 @@ import java.util.Map;
 @SuppressWarnings("JavaDoc")
 public class Map$Test {
 	@Test
-	public void remoteList() {
+	public void listFor() {
 		Map map = new HashMap();
 
 		map.put("fake", 0);
@@ -78,7 +78,7 @@ public class Map$Test {
 	}
 
 	@Test
-	public void remoteMap() {
+	public void mapFor() {
 		class TestObject {
 			final public int fin = 5;
 			public int pub = 3;
