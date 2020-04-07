@@ -17,6 +17,7 @@ repositories {
 }
 
 dependencies {
-	implementation 'com.github.cufyorg:util:0.1.1'
+    //...
+    implementation 'com.github.cufyorg:util:0.1.1'
 }
 ```
